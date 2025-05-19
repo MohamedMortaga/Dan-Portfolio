@@ -34,9 +34,22 @@ window.addEventListener('scroll', function () {
         }
     });
 });
-
-onload = function(){          //2wel mtft7 5le nav1 home active we nav2 home brdo active
-      document.querySelectorAll('.navbar1 .nav-link[href="#"], .navbar2 .nav-link[href="#"]').forEach(link => {
-        link.classList.add('active');
+document.querySelectorAll('.navbar-toggler').forEach(toggler => {
+    toggler.addEventListener('click', function () {
+        const targetId = this.getAttribute('data-bs-target');
+        const collapseElement = document.querySelector(targetId);
+        if (collapseElement.classList.contains('show')) {
+            collapseElement.classList.remove('show');
+        } else {
+            collapseElement.classList.add('show');
+        }
     });
-}
+});
+document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.addEventListener('click', function () {
+        const collapseElement = this.closest('.navbar-collapse');
+        if (collapseElement.classList.contains('show')) {
+            collapseElement.classList.remove('show');
+        }
+    });
+});
