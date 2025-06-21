@@ -52,4 +52,16 @@ document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
             collapseElement.classList.remove('show');
         }
     });
+<<<<<<< Updated upstream
 });
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+});
+=======
+});
+>>>>>>> 48fef0006739ffce089e972596074c2cade3cd3f
+=======
+});
+>>>>>>> 48fef0006739ffce089e972596074c2cade3cd3f
+>>>>>>> Stashed changes
